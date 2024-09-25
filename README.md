@@ -16,7 +16,7 @@ Om de werking van je code te testen, maak je een controller aan met methoden waa
    1. Java versie 17, 21 of 22, afhankelijk van welke je al hebt op je laptop.
    1. Voeg de volgende dependencies toe: Spring Web, Spring Data JPA, H2 Database
 2. Open het project met IntelliJ IDEA.
-3. Maak een package "config" en plaats daarin een klasse met configuratie voor je database. Fix alle imports en let op de annotaties:
+3. Maak een package "config" en plaats daarin een klasse met configuratie voor je database. Zorg dat deze package op tenminste hetzelfde package niveau staat als je main klasse (of in een subpackage), anders zal Spring je Beans niet kunnen vinden. Fix alle imports en let op de annotaties:
 ```java
 @Configuration
 public class DBConfig {
