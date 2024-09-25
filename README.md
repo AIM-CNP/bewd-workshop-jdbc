@@ -180,7 +180,9 @@ Snack s = jdbcTemplate.queryForObject("SELECT * FROM Snack WHERE snacknr = ?", n
 
 ## Gegevens opslaan en bijwerken: INSERT en UPDATE
 
-Om gegevens op te slaan en bij te werken gebruik je de methode jdbcTemplate.update.
+Om gegevens op te slaan en bij te werken gebruik je de methode jdbcTemplate.update. Maak voor elke een nieuwe endpoint in je controller.
+
+Gebruik een *POST*, *PUT* en *DELETE* HTTP Verb.
 
 INSERT:
 
@@ -200,3 +202,8 @@ jdbcTemplate.update("UPDATE Snack SET snacknaam = ? WHERE snacknr = ?",
 ```
 
 
+DELETE:
+
+```java
+jdbcTemplate.update("DELETE FROM Snack WHERE snacknr = ?", snacknr);
+```
